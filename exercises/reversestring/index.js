@@ -20,6 +20,8 @@ function reverse(str) {
     var res = str.split('');
     res = res.reverse();
     return res.join('');
+
+    //you can use for (character in str) as well.
 }
 
 module.exports = reverse;
