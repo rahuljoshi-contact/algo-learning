@@ -10,23 +10,21 @@
 
 function reverseInt(n) {
 
-    var neg = new Boolean(false);
     var s = n.toString();
-    //remove and keep negative sign
-    if (s.substr(0,1) == '-') {
-      neg = true;
-      s = s.substr(1,s.length-1);
-    }
-
     var res = s.split('');
     res = res.reverse();
     var ans = res.join('');
 
-    if(neg == true)
-        ans = '-' + ans ;
-
+    //remove and keep negative sign
+    // var neg = new Boolean(false);
+    // if (s.substr(0,1) == '-') {
+    //   neg = true;
+    //   s = s.substr(1,s.length-1);
+    // }
+    //if(neg == true)
+    //    ans = '-' + ans ;
     debugger;
-    return Number(ans);
+    return parseInt(ans) * Math.sign(n);
 }
 
 reverseInt(12);
