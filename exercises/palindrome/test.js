@@ -4,10 +4,6 @@ test('palindrome function is defined', () => {
   expect(typeof palindrome).toEqual('function');
 });
 
-test('"aba" is a palindrome', () => {
-  expect(palindrome('aba')).toBeTruthy();
-});
-
 test('" aba" is not a palindrome', () => {
   expect(palindrome(' aba')).toBeFalsy();
 });
@@ -30,4 +26,8 @@ test('"Fish hsif" is not a palindrome', () => {
 
 test('"pennep" a palindrome', () => {
   expect(palindrome('pennep')).toBeTruthy();
+});
+
+test('"aba" is a palindrome', () => {
+  expect(palindrome('aba')).toBeTruthy();
 });
