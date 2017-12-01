@@ -13,8 +13,10 @@ function maxChar(str) {
       charMap[i]++
     else {
       charMap[i] = 1
+    debugger;  
     }
   }
+  debugger;
   console.log(charMap);
   var max = 0 ;
   var maxChar = '';
@@ -27,5 +29,5 @@ function maxChar(str) {
 
   return maxChar;
 }
-
+maxChar('apple');
 module.exports = maxChar;
