@@ -10,15 +10,15 @@ test('Node is a class', () => {
   expect(typeof Node.prototype.constructor).toEqual('function');
 });
 
-describe.skip('A Node', () => {
+//describe.skip('A Node', () => {
   test('has properties "data" and "next"', () => {
     const node = new Node('a', 'b');
     expect(node.data).toEqual('a');
     expect(node.next).toEqual('b');
   });
-});
+//});
 
-describe.skip('Insert First', () => {
+//describe.skip('Insert First', () => {
   test('appends a node to the start of the list', () => {
     const l = new List();
     l.insertFirst(1);
@@ -26,9 +26,9 @@ describe.skip('Insert First', () => {
     l.insertFirst(2);
     expect(l.head.data).toEqual(2);
   });
-});
+//});
 
-describe.skip('Size', () => {
+//describe.skip('Size', () => {
   test('returns the number of items in the linked list', () => {
     const l = new List();
     expect(l.size()).toEqual(0);
@@ -38,9 +38,9 @@ describe.skip('Size', () => {
     l.insertFirst(1);
     expect(l.size()).toEqual(4);
   });
-});
+//});
 
-describe.skip('GetFirst', () => {
+// describe.skip('GetFirst', () => {
   test('returns the first element', () => {
     const l = new List();
     l.insertFirst(1);
@@ -48,9 +48,9 @@ describe.skip('GetFirst', () => {
     l.insertFirst(2);
     expect(l.getFirst().data).toEqual(2);
   });
-});
+// });
 
-describe.skip('GetLast', () => {
+// describe.skip('GetLast', () => {
   test('returns the last element', () => {
     const l = new List();
     l.insertFirst(2);
@@ -58,9 +58,9 @@ describe.skip('GetLast', () => {
     l.insertFirst(1);
     expect(l.getLast()).toEqual({ data: 2, next: null });
   });
-});
+// });
 
-describe.skip('Clear', () => {
+// describe.skip('Clear', () => {
   test('empties out the list', () => {
     const l = new List();
     expect(l.size()).toEqual(0);
@@ -72,9 +72,9 @@ describe.skip('Clear', () => {
     l.clear();
     expect(l.size()).toEqual(0);
   });
-});
+// });
 
-describe.skip('RemoveFirst', () => {
+// describe.skip('RemoveFirst', () => {
   test('removes the first node when the list has a size of one', () => {
     const l = new List();
     l.insertFirst('a');
@@ -95,9 +95,9 @@ describe.skip('RemoveFirst', () => {
     expect(l.size()).toEqual(1);
     expect(l.getFirst().data).toEqual('c');
   });
-});
+// });
 
-describe.skip('RemoveLast', () => {
+// describe.skip('RemoveLast', () => {
   test('RemoveLast removes the last node when list is empty', () => {
     const l = new List();
     expect(() => {
@@ -133,9 +133,9 @@ describe.skip('RemoveLast', () => {
     expect(l.size()).toEqual(2);
     expect(l.getLast().data).toEqual('b');
   });
-});
+// });
 
-describe.skip('InsertLast', () => {
+// describe.skip('InsertLast', () => {
   test('adds to the end of the list', () => {
     const l = new List();
     l.insertFirst('a');
@@ -145,9 +145,9 @@ describe.skip('InsertLast', () => {
     expect(l.size()).toEqual(2);
     expect(l.getLast().data).toEqual('b');
   });
-});
+// });
 
-describe.skip('GetAt', () => {
+// describe.skip('GetAt', () => {
   test('returns the node at given index', () => {
     const l = new List();
     expect(l.getAt(10)).toEqual(null);
@@ -162,9 +162,9 @@ describe.skip('GetAt', () => {
     expect(l.getAt(2).data).toEqual(3);
     expect(l.getAt(3).data).toEqual(4);
   });
-});
+// });
 
-describe.skip('RemoveAt', () => {
+// describe.skip('RemoveAt', () => {
   test('removeAt doesnt crash on an empty list', () => {
     const l = new List();
     expect(() => {
@@ -215,9 +215,9 @@ describe.skip('RemoveAt', () => {
     l.removeAt(3);
     expect(l.getAt(3)).toEqual(null);
   });
-});
+// });
 
-describe.skip('InsertAt', () => {
+// describe.skip('InsertAt', () => {
   test('inserts a new node with data at the 0 index when the list is empty', () => {
     const l = new List();
     l.insertAt('hi', 0);
@@ -270,9 +270,9 @@ describe.skip('InsertAt', () => {
     expect(l.getAt(1).data).toEqual('b');
     expect(l.getAt(2).data).toEqual('hi');
   });
-});
+// });
 
-describe.skip('ForEach', () => {
+// describe.skip('ForEach', () => {
   test('applies a transform to each node', () => {
     const l = new List();
 
@@ -290,9 +290,9 @@ describe.skip('ForEach', () => {
     expect(l.getAt(2).data).toEqual(13);
     expect(l.getAt(3).data).toEqual(14);
   });
-});
+// });
 
-describe.skip('for...of loops', () => {
+// describe.skip('for...of loops', () => {
   test('works with the linked list', () => {
     const l = new List();
 
@@ -318,4 +318,4 @@ describe.skip('for...of loops', () => {
       }
     }).not.toThrow();
   });
-});
+// });
