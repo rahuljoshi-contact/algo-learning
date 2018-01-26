@@ -21,7 +21,6 @@ function steps(n) {
   var text = '';
   for (let row=1; row<=n; row++){
     text += '#';
-    //text = text + getspaces(n-row);
     // console.log('\'' + text + spaces +  '\'');
     console.log(text + getspaces(n-row));
   }
@@ -35,4 +34,5 @@ function getspaces(n) {
   return spaces ;
 }
 
+steps(4);
 module.exports = steps;
