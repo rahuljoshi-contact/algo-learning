@@ -19,20 +19,22 @@
 
 function steps(n) {
   var text = '';
-  for (let row=1; row<=n; row++){
+  for (let row = 1; row <= n; row++) {
     text += '#';
     //text = text + getspaces(n-row);
     // console.log('\'' + text + spaces +  '\'');
-    console.log(text + getspaces(n-row));
+    console.log(text + getspaces(n - row));
   }
 }
 
 function getspaces(n) {
   var spaces = '';
-  for (let columns=0; columns<n; columns++){
+  for (let columns = 0; columns < n; columns++) {
     spaces += ' ';
   }
-  return spaces ;
+  return spaces;
 }
+
+steps(5);
 
 module.exports = steps;
