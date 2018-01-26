@@ -19,20 +19,25 @@
 
 function steps(n) {
   var text = '';
-  for (let row=1; row<=n; row++){
+  for (let row = 1; row <= n; row++) {
     text += '#';
     // console.log('\'' + text + spaces +  '\'');
-    console.log(text + getspaces(n-row));
+    console.log(text + getspaces(n - row));
   }
 }
 
 function getspaces(n) {
   var spaces = '';
-  for (let columns=0; columns<n; columns++){
+  for (let columns = 0; columns < n; columns++) {
     spaces += ' ';
   }
-  return spaces ;
+  return spaces;
 }
 
+<<<<<<< HEAD
 steps(4);
+=======
+steps(5);
+
+>>>>>>> e47a701e87f444687e7c0207e4aece0ba1f70eee
 module.exports = steps;
